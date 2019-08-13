@@ -15,4 +15,5 @@ date: 2019-8-13
 + ubuntu
 + mint
 + deepin
+
 [choose distribution](https://www.linux.com/news/best-linux-distribution-new-users)
