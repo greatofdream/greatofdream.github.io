@@ -32,4 +32,32 @@ ibus-setup
 
 icon in the menu bar, which is charge management.
 
+## openvpn requirement
+
++ tun/tap
+```
+modinfo tun
+modprobe tun
+lsmod |grep tun
+```
++ openssl
+```
+yum install openssl-devel
+```
++ lzo
+```
+yum install lzo-devel
+```
++ libpam
+```
+yum install pam-devel
+```
++ cmake
+```
+yum install cmake
+```
++ cmocka
+strange error and do not need to handle this error
+
+
 
