@@ -20,3 +20,16 @@ must use the ultraiso or other tools to write the iso into the U-disk.
 + should assign the disk first
 + when creating the user(not root), if you add group and then check the administator, installation will give a bug and you only restart and do all things again.
 
+## centos 中文输入法
+
+```
+ibus-setup
+```
+
+出现一个`gui`界面,在`preference`中添加语言，需要退出重新进入
+
+## centos screen brightness
+
+icon in the menu bar, which is charge management.
+
+
