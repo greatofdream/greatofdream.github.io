@@ -16,4 +16,7 @@ the iso file size is about 4.3GB.([url](http://mirrors.tuna.tsinghua.edu.cn/cent
 
 must use the ultraiso or other tools to write the iso into the U-disk.
 
-Do not use the windows file explorer, just copy make no sense.
++ Do not use the windows file explorer, just copy make no sense.
++ should assign the disk first
++ when creating the user(not root), if you add group and then check the administator, installation will give a bug and you only restart and do all things again.
+
