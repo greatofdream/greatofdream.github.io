@@ -57,7 +57,17 @@ yum install pam-devel
 yum install cmake
 ```
 + cmocka
+
 strange error and do not need to handle this error
+
+[just need download a git repo](https://github.com/OpenVPN/openvpn/blob/master/INSTALL)you can find detail in the INSTALL instructions.
+
++ problem
+
+ - cannot ping the ip in vpn network
+ 
+ 
+
 
 
 
