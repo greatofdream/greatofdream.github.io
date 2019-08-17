@@ -15,6 +15,7 @@ date: 2019-8-13
 + ubuntu
 + mint
 + deepin
++ [manjaro](https://www.manjaro.cn/), base on Arch contain a lot of software.
 
 [choose distribution](https://www.linux.com/news/best-linux-distribution-new-users)
 
@@ -31,3 +32,4 @@ date: 2019-8-13
 + [mint]()
 ### Arch
 + [Arch](https://wiki.archlinux.org/index.php/Arch_Linux) 
++ [manjaro](https://www.manjaro.cn/)
