@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "linux distribution CentOS install record"
-date: 2019-8-16
+date: 2019-8-17
 ---
 
 ## yum knowlege
