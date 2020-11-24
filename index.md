@@ -17,11 +17,17 @@ title: Zhang Aiqiang
     - 框架：`Flask` `Django`; 了解`JavaEE`
 + 算法
 + 计算机图形学
++ 其它主流语言
+    - tex
+    - FPGA的 VHDL Verilog
+    - shell
+    - python
+    - C++, C
 ## 项目
 + 前端
     - [学生清华主页](https://student.tsinghua.edu.cn) 参与; 使用`Vue`开发
     - [清华大学高能物理主页](http://hep.tsinghua.edu.cn) 参与; 使用`Vue`, `Bootstrap`开发
-    	+ [会议管理系统](http://hep.tsinghua.edu.cn/seminar) [代码地址](https://github.com/greatofdream/simpleIndico)
+        + [会议管理系统](http://hep.tsinghua.edu.cn/seminar) [代码地址](https://github.com/greatofdream/simpleIndico)
 + 后端
     - [校团委管理后端]() 参与；使用`Typescript`开发
 + 大数据项目
