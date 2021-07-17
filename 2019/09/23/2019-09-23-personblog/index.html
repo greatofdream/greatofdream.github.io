@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="build personal blog, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>build personal blog | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">build personal blog</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2019-09-23
                 </div>
                 
 
@@ -464,19 +464,27 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="choose-a-suitable-blog"><a href="#choose-a-suitable-blog" class="headerlink" title="choose a suitable blog"></a>choose a suitable blog</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">Hero</a></li>
+<li><a href="">MkDoc</a></li>
+</ul>
+<h2 id="Hero-blog"><a href="#Hero-blog" class="headerlink" title="Hero blog"></a>Hero blog</h2><h3 id="npm-and-nvm"><a href="#npm-and-nvm" class="headerlink" title="npm and nvm"></a>npm and nvm</h3><p>当直接使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>极可能出现EACCES错误，可以<br><a target="_blank" rel="noopener" href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally">安装nvm</a><br>并重新安装npm,nodejs解决</p>
+<p>可以发现实际上<strong>HEXO</strong>被安装到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~/.nvm/versions/node/v12.10.0/bin/hexo </span><br><span class="line">-&gt;</span><br><span class="line">~/.nvm/versions/node/v12.10.0/lib/node_modules/hexo-cli/bin/hexo</span><br></pre></td></tr></table></figure>
+<h3 id="latex支持"><a href="#latex支持" class="headerlink" title="latex支持"></a>latex支持</h3><p>发现<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/68e6f82d88b7">简书</a>提供了一个很好的解决方案</p>
+<ul>
+<li>安装kramed<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure></li>
+<li>更改配置文件，此处待我仔细研究，用到了正则表达式，直接参考上面简书内链接</li>
+<li>然后需要使用mathjax，要在themes中修改配置文件，默认的<strong>landscape^^并没有这个选项，所以只好<br>转投</strong>next**主题，在官网上按照<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html">说明</a>安装</li>
+<li>修改根目录下**_config.yml<strong>的选项</strong>themes: next**,修改<strong>next</strong>文件夹下的**_config.yml<strong>中的选项</strong>mathjax: enable:true**</li>
+</ul>
+<h3 id="分类支持"><a href="#分类支持" class="headerlink" title="分类支持"></a>分类支持</h3><p>参考了知乎上的一个回答，使用了categories,目前还没有实际使用</p>
+<h3 id="快速部署"><a href="#快速部署" class="headerlink" title="快速部署"></a>快速部署</h3><p>网页上很多是使用github部署，官网上也给出了其他的部署方案，我在这里用到了<a target="_blank" rel="noopener" href="https://hexo.io/docs/other-deployments#Rsync">rsync</a><br>的部署方案。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: rsync</span><br><span class="line">  host: parity</span><br><span class="line">  user: greatofdream</span><br><span class="line">  root: /var/www/physics</span><br></pre></td></tr></table></figure>
+<p>此处远程服务器parity在本地有greatofdream用户的ssh公钥，可以直接ssh登录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g #产生文件</span><br><span class="line">hexo d #部署文件</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -503,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://greatofdream.github.io/2021/07/17/hello-world/">https://greatofdream.github.io/2021/07/17/hello-world/</a>
+                    <a href="https://greatofdream.github.io/2019/09/23/2019-09-23-personblog/">https://greatofdream.github.io/2019/09/23/2019-09-23-personblog/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,13 +722,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/18/testpost/">
+                <a href="/2019/09/24/2019-09-24-applyaustriliavisa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="testpost">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="applying the visa of Austrilia">
                         
-                        <span class="card-title">testpost</span>
+                        <span class="card-title">applying the visa of Austrilia</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -731,7 +739,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-24
                         </span>
                         <span class="publish-author">
                             
@@ -751,13 +759,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/13/2020-09-13-illustrator/">
+                <a href="/2019/09/15/2019-09-15-commandline/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Illustrator">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="cmommand line">
                         
-                        <span class="card-title">Illustrator</span>
+                        <span class="card-title">cmommand line</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,7 +776,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-15
                             </span>
                         <span class="publish-author">
                             

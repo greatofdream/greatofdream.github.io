@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="hadoop, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>hadoop | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">hadoop</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2019-10-04
                 </div>
                 
 
@@ -464,19 +464,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>配置文件位于<code>etc/hadoop</code>下，主要配置以下环境</p>
+<h3 id="core-site-xml"><a href="#core-site-xml" class="headerlink" title="core-site.xml"></a><code>core-site.xml</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hdfs://master:9000</span><br><span class="line">#启动hdfs的server在master节点9000端口</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="hdfs-site-xml"><a href="#hdfs-site-xml" class="headerlink" title="hdfs-site.xml"></a><code>hdfs-site.xml</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dfs.replication</span><br><span class="line"># 文件副本数目</span><br></pre></td></tr></table></figure>
+<h3 id="mapred-site-xml"><a href="#mapred-site-xml" class="headerlink" title="mapred-site.xml"></a><code>mapred-site.xml</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mapreduce.framework.name</span><br><span class="line">yarn</span><br><span class="line"># 使用yarn作为管理后台，用于真正的分布式部署</span><br></pre></td></tr></table></figure>
+<h3 id="yarn-site-xml"><a href="#yarn-site-xml" class="headerlink" title="yarn-site.xml"></a><code>yarn-site.xml</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mapreduce_shuffle # mapreduce中使用shuffle(洗牌）</span><br><span class="line"></span><br><span class="line">yarn.resourcemanager.hostname</span><br><span class="line">master# 指定resourcemanager在master主机</span><br></pre></td></tr></table></figure>
+<h3 id="workers"><a href="#workers" class="headerlink" title="workers"></a><code>workers</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">写入作为slave的主机名称</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="hadoop-pill"><a href="#hadoop-pill" class="headerlink" title="hadoop:pill:"></a>hadoop:pill:</h2><p>位于etc/hadoop-env.sh中的<strong>JAVA_HOME</strong>似乎应该需要<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/20628093/java-home-is-not-set-in-hadoop">配置绝对路径</a></p>
+<p>使用hadoop3.2.1时，openjdk9似乎有问题，使用yarn时会报错声称</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2019-10-04 16:21:59,566 INFO mapreduce.Job: Job job_1570176818335_0003 failed with state FAILED due to: </span><br><span class="line">Application application_1570176818335_0003 failed 2 times due to Error launching appattempt_1570176818335_0003_000002. </span><br><span class="line">Got exception: org.apache.hadoop.security.AccessControlException: Unable to find SASL server implementation for DIGEST-MD5</span><br></pre></td></tr></table></figure>
+<p>换成openjdk8</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[2019-10-04 17:17:02.073]Container exited with a non-zero exit code 127. Error file: prelaunch.err.</span><br><span class="line">Last 4096 bytes of prelaunch.err :</span><br><span class="line">Last 4096 bytes of stderr :</span><br><span class="line">/bin/bash: /bin/java: No such file or directory</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>换成oracle jdk8<br>报错和openjdk8一致<br>只好强行在/bin/中写入文件连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -s /usr/bin/java /bin/java</span><br></pre></td></tr></table></figure>
+<p>在另一台机器配置了host文件，将对应的域名指向127.0.0.1，发现竟然没有这个错误。</p>
+<p>配置分布式后发现启动没有Namenode,resourcemanager，果断将/etc/hosts域名指向127.0.0.1，解决了这个问题，重新启动就正常了</p>
+<p><strong>发现不能用正常ip的原因竟然是腾讯云的网络问题，只能用私有地址，不能用他提供访问的公有地址，:cake: 而且<a target="_blank" rel="noopener" href="https://cwiki.apache.org/confluence/display/HADOOP2/ConnectionRefused">文档强调不能指向127.0.0.1</a></strong></p>
+<p>重启会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.apache.hadoop.hdfs.server.common.InconsistentFSStateException: Directory /tmp/hadoop-ubuntu/dfs/name is in an inconsistent state</span><br></pre></td></tr></table></figure>
+<p>有问答指出<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/17376982/org-apache-hadoop-hdfs-server-common-inconsistentfsstateexception-directory-tm">tmp会被清理</a><br>因此调整core-site.xml中对于<strong>tmp.dir</strong>设置</p>
+<p>发现host配置错误会卡在resourcesmanager上，本机名字对应的ip一定要是<strong>127.0.0.1</strong>放在第一位<br>否则报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032</span><br></pre></td></tr></table></figure>
+<p>直接在master节点执行命令发现报错，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-bash: bin/dfs: No such file or directory</span><br></pre></td></tr></table></figure>
+<p>slave节点未完整配置$HADOOP_HOME和$path，一股脑全都加了进去，bin/hdfs就可以找到了。</p>
+<p>配置分布式后始终不能连接,logs中datanode显示无法连接master，master对应9000端口为127.0.0.1:9000显然不能访问，尝试多次后将core-site.xml中的域名直接改为对应ip，将slave对应的host文件改成对应iP即可，同时telnet也可以成功连接上master。</p>
+<p>但是新的问题是腾讯云提供了两个ip，使用master公网ip根本无法连通，datanode.log中显示一直在retry，telnet也无法成功，似乎是腾讯云有某种过滤机制。</p>
+<p>使用私有地址的ip,telnet可以成功，但是新的报错出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Datanode denied communication with namenode because hostname cannot be resolved</span><br><span class="line">(ip=172.21.101.4, hostname=172.21.101.4)</span><br></pre></td></tr></table></figure>
+<p> 发现了两种解决方案，其中<a target="_blank" rel="noopener" href="https://blog.csdn.net/lulynn/article/details/46725683">详细代码解释</a>很棒,<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/27195466/hdfs-datanode-denied-communication-with-namenode-because-hostname-cannot-be-reso">stackoverflow</a>也有人提出相关问题</p>
+<p> 最后采用在master和slave上的<strong>core-site</strong>中加入<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">           &lt;name&gt;dfs.namenode.datanode.registration.ip-hostname-check&lt;/name&gt;                   </span><br><span class="line">           &lt;value&gt;false&lt;/value&gt;</span><br><span class="line"> &lt;/property&gt;</span><br></pre></td></tr></table></figure><br>slave和master成功通信</p>
+<p>启动sbin/start-yarn.sh,出现和之前类似的报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> Connecting to ResourceManager at vm25/172.21.101.13:8031</span><br><span class="line"> </span><br><span class="line">2019-10-07 13:25:23,956 INFO org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor</span><br><span class="line">2019-10-07 13:25:23,961 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at vm25/172.21.101.13:8031</span><br><span class="line">2019-10-07 13:25:23,999 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Sending out 0 NM container statuses: []</span><br><span class="line">2019-10-07 13:25:24,008 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Registering with RM using containers :[]</span><br><span class="line">2019-10-07 13:25:25,043 INFO org.apache.hadoop.ipc.Client: Retrying connect to server: vm25/172.21.101.13:8031. Already tried 0 time(s)</span><br></pre></td></tr></table></figure>
+<p>netstat看了master上的端口，发现又在27.0.0.1上启动了，直接改了yarn-site.xml中对应的resourcemanager的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;value&gt;0.0.0.0&lt;value&gt;</span><br></pre></td></tr></table></figure>
+<p>slave和master的resourcemanager通信成功,然而再次出现错误，对应<a target="_blank" rel="noopener" href="https://github.com/apache/hadoop/commit/73ecb19312879d54e1cbe80199fe950d81c81104">代码</a><br>slave上报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">org.apache.hadoop.yarn.server.nodemanager.containermanager.ContainerManagerImpl: couldn&#x27;t find application application_1570428476013_0001 while processing FINISH_APPS event. The ResourceManager allocated resources </span><br><span class="line">for this application to the NodeManager but no active containers were found to process.</span><br></pre></td></tr></table></figure>
+<p>master上报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Application application_1570428476013_0001 failed 2 times due to Error launching appattempt_1570428476013_0001_000002. </span><br><span class="line">Got exception: java.net.ConnectException: Call From localhost.localdomain/127.0.0.1 to localhost.localdomain:38808 failed </span><br><span class="line">on connection exception: java.net.ConnectException: Connection refused;</span><br></pre></td></tr></table></figure>
+<p>slave的网络</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tcp        0      0 0.0.0.0:8042            0.0.0.0:*               LISTEN      12711/java  </span><br><span class="line">tcp        0      0 0.0.0.0:9866            0.0.0.0:*               LISTEN      5062/java   </span><br><span class="line">tcp        0      0 0.0.0.0:9867            0.0.0.0:*               LISTEN      5062/java   </span><br><span class="line">tcp        0      0 127.0.0.1:35314         0.0.0.0:*               LISTEN      5062/java   </span><br><span class="line">tcp        0      0 0.0.0.0:38808           0.0.0.0:*               LISTEN      12711/java  </span><br><span class="line">tcp        0      0 0.0.0.0:13562           0.0.0.0:*               LISTEN      12711/java  </span><br><span class="line">tcp        0      0 0.0.0.0:8040            0.0.0.0:*               LISTEN      12711/java  </span><br><span class="line">tcp        0      0 0.0.0.0:9864            0.0.0.0:*               LISTEN      5062/java   </span><br></pre></td></tr></table></figure>
+<p>master的网络</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tcp        0      0 0.0.0.0:9868            0.0.0.0:*               LISTEN      31184/java</span><br><span class="line">tcp        0      0 0.0.0.0:9870            0.0.0.0:*               LISTEN      30918/java</span><br><span class="line">tcp        0      0 0.0.0.0:19888           0.0.0.0:*               LISTEN      6694/java</span><br><span class="line">tcp        0      0 0.0.0.0:10033           0.0.0.0:*               LISTEN      6694/java</span><br><span class="line">tcp        0      0 0.0.0.0:8088            0.0.0.0:*               LISTEN      8121/java</span><br><span class="line">tcp        0      0 0.0.0.0:8030            0.0.0.0:*               LISTEN      8121/java</span><br><span class="line">tcp        0      0 0.0.0.0:8031            0.0.0.0:*               LISTEN      8121/java</span><br><span class="line">tcp        0      0 0.0.0.0:8032            0.0.0.0:*               LISTEN      8121/java</span><br><span class="line">tcp        0      0 0.0.0.0:8033            0.0.0.0:*               LISTEN      8121/java</span><br><span class="line">tcp        0      0 0.0.0.0:10020           0.0.0.0:*               LISTEN      6694/java</span><br><span class="line">tcp        0      0 0.0.0.0:9000            0.0.0.0:*               LISTEN      30918/java</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>最后发现是配置文件问题，在<a href=":cake:">链接</a>处指出host文件配置问题，而且由于腾讯云内部网络，只能用私有地址作为host文件内部各主机ip，公有ip是无法使得程序运行，之前所有的问题都是因为这个ip原因</p>
 
                 
             </div>
@@ -503,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://greatofdream.github.io/2021/07/17/hello-world/">https://greatofdream.github.io/2021/07/17/hello-world/</a>
+                    <a href="https://greatofdream.github.io/2019/10/04/2019-10-04-hadoop/">https://greatofdream.github.io/2019/10/04/2019-10-04-hadoop/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,13 +748,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/18/testpost/">
+                <a href="/2019/10/13/2019-10-04-kudu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="testpost">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="kudu installation">
                         
-                        <span class="card-title">testpost</span>
+                        <span class="card-title">kudu installation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -731,7 +765,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-13
                         </span>
                         <span class="publish-author">
                             
@@ -751,13 +785,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/13/2020-09-13-illustrator/">
+                <a href="/2019/09/25/2019-09-25-distributesystem/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Illustrator">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="distribute system">
                         
-                        <span class="card-title">Illustrator</span>
+                        <span class="card-title">distribute system</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,7 +802,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-25
                             </span>
                         <span class="publish-author">
                             

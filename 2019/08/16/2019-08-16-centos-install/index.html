@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="linux distribution CentOS install record, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>linux distribution CentOS install record | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">linux distribution CentOS install record</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-17
+                    2019-08-16
                 </div>
                 
 
@@ -464,19 +464,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="use-minimal-iso"><a href="#use-minimal-iso" class="headerlink" title="use minimal iso"></a>use minimal iso</h2><p>the iso url is <a target="_blank" rel="noopener" href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso">http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso</a></p>
+<p>it was a stupid choice which took me about 5 hours to wait the source installation verified and failed at last.</p>
+<h2 id="use-dvd-iso"><a href="#use-dvd-iso" class="headerlink" title="use dvd iso"></a>use dvd iso</h2><p>the iso file size is about 4.3GB.(<a target="_blank" rel="noopener" href="http://mirrors.tuna.tsinghua.edu.cn/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso">url</a>)</p>
+<p>must use the ultraiso or other tools to write the iso into the U-disk.</p>
+<ul>
+<li>Do not use the windows file explorer, just copy make no sense.</li>
+<li>should assign the disk first</li>
+<li>when creating the user(not root), if you add group and then check the administator, installation will give a bug and you only restart and do all things again.</li>
+</ul>
+<h2 id="centos-中文输入法"><a href="#centos-中文输入法" class="headerlink" title="centos 中文输入法"></a>centos 中文输入法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibus-setup</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>出现一个<code>gui</code>界面,在<code>preference</code>中添加语言，需要退出重新进入</p>
+<h2 id="centos-screen-brightness"><a href="#centos-screen-brightness" class="headerlink" title="centos screen brightness"></a>centos screen brightness</h2><p>icon in the menu bar, which is charge management.</p>
+<h2 id="openvpn-requirement"><a href="#openvpn-requirement" class="headerlink" title="openvpn requirement"></a>openvpn requirement</h2><ul>
+<li>tun/tap<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">modinfo tun</span><br><span class="line">modprobe tun</span><br><span class="line">lsmod |grep tun</span><br></pre></td></tr></table></figure></li>
+<li>openssl<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel</span><br></pre></td></tr></table></figure></li>
+<li>lzo<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install lzo-devel</span><br></pre></td></tr></table></figure></li>
+<li>libpam<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install pam-devel</span><br></pre></td></tr></table></figure></li>
+<li>cmake<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install cmake</span><br></pre></td></tr></table></figure></li>
+<li>cmocka</li>
+</ul>
+<p>strange error and do not need to handle this error</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/OpenVPN/openvpn/blob/master/INSTALL">just need download a git repo</a>you can find detail in the INSTALL instructions.</p>
+<ul>
+<li>problem</li>
+</ul>
+<ul>
+<li>cannot ping the ip in vpn network</li>
+</ul>
 
                 
             </div>
@@ -503,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://greatofdream.github.io/2021/07/17/hello-world/">https://greatofdream.github.io/2021/07/17/hello-world/</a>
+                    <a href="https://greatofdream.github.io/2019/08/16/2019-08-16-centos-install/">https://greatofdream.github.io/2019/08/16/2019-08-16-centos-install/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,13 +730,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/18/testpost/">
+                <a href="/2019/08/17/2019-08-17-yum-operation/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="testpost">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="linux distribution CentOS install record">
                         
-                        <span class="card-title">testpost</span>
+                        <span class="card-title">linux distribution CentOS install record</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -731,7 +747,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-08-17
                         </span>
                         <span class="publish-author">
                             
@@ -751,13 +767,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/13/2020-09-13-illustrator/">
+                <a href="/2019/08/13/2019-08-13-linux-distribution-choice/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Illustrator">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="How to choose the best linux distribution">
                         
-                        <span class="card-title">Illustrator</span>
+                        <span class="card-title">How to choose the best linux distribution</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,7 +784,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-13
                             </span>
                         <span class="publish-author">
                             
