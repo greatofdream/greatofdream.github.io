@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Latex-doc, GreatofDream的blog">
+    <meta name="keywords" content="Latex 笔记, GreatofDream的blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Latex-doc | GreatofDream的blog</title>
+    <title>Latex 笔记 | GreatofDream的blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Latex-doc</h1>
+                    <h1 class="description center-align post-title">Latex 笔记</h1>
                 </div>
             </div>
         </div>
@@ -550,9 +550,12 @@
 <h2 id="patchcmd"><a href="#patchcmd" class="headerlink" title="patchcmd"></a>patchcmd</h2><p> <a target="_blank" rel="noopener" href="https://tex.stackexchange.com/questions/152773/please-tutor-the-usage-of-patchcmd-and-xpatch">参考</a><br> <code>\patchcmd</code>可以替换原本命令中的某些部分</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> \pretocmd&#123;&lt;command&gt;&#125;&#123;&lt;code&gt;&#125;&#123;&lt;success&gt;&#125;&#123;&lt;failure&gt;&#125;</span><br><span class="line">\apptocmd&#123;&lt;command&gt;&#125;&#123;&lt;code&gt;&#125;&#123;&lt;success&gt;&#125;&#123;&lt;failure&gt;&#125;</span><br><span class="line">\patchcmd&#123;&lt;command&gt;&#125;&#123;&lt;code to replace&gt;&#125;&#123;&lt;code&gt;&#125;&#123;&lt;success&gt;&#125;&#123;&lt;failure&gt;&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Beamer-标题页和目录页不计入页数"><a href="#Beamer-标题页和目录页不计入页数" class="headerlink" title="Beamer:标题页和目录页不计入页数"></a>Beamer:标题页和目录页不计入页数</h2><p>使用<code>noframenumbering</code>关键词</p>
+<h1 id="Beamer"><a href="#Beamer" class="headerlink" title="Beamer"></a>Beamer</h1><p>主题设置可以在<a target="_blank" rel="noopener" href="https://hartwork.org/beamer-theme-matrix/">这里</a>查看, tex命令为<code>\usetheme</code>,<code>\usecolortheme</code></p>
+<p>比如beamer头部可以使用下面示例</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[aspectratio=169]&#123;beamer&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;ctex&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;amsmath,siunitx,mhchem,calligra&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;graphicx,caption,subcaption,cite&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;appendixnumberbeamer&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>[square,sort,comma,numbers]&#123;natbib&#125;</span><br><span class="line"><span class="keyword">\usetheme</span>&#123;AnnArbor&#125;</span><br><span class="line"><span class="keyword">\usecolortheme</span>&#123;whale&#125;</span><br><span class="line"><span class="keyword">\title</span>&#123;Solar Element Abundance, Standard Solar Model and Solar Neutrino&#125;</span><br><span class="line"><span class="keyword">\author</span>&#123;Zhang Aiqiang&#125;</span><br><span class="line"><span class="keyword">\institute</span>&#123;Tsinghua University&#125;</span><br><span class="line"><span class="keyword">\date</span>&#123;2023/06/08&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;frame&#125;[noframenumbering]</span><br><span class="line">    <span class="keyword">\titlepage</span></span><br><span class="line"><span class="keyword">\end</span>&#123;frame&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;frame&#125;[noframenumbering]</span><br><span class="line">    <span class="keyword">\tableofcontents</span></span><br><span class="line"><span class="keyword">\end</span>&#123;frame&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;Overview&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;frame&#125;&#123;frame title&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;frame&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="标题页和目录页不计入页数"><a href="#标题页和目录页不计入页数" class="headerlink" title="标题页和目录页不计入页数"></a>标题页和目录页不计入页数</h2><p>使用<code>noframenumbering</code>关键词</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;frame&#125;[noframenumbering]</span><br><span class="line">    \titlepage</span><br><span class="line">\end&#123;frame&#125;</span><br><span class="line">\begin&#123;frame&#125;[noframenumbering]</span><br><span class="line">    \frametitle&#123;Content&#125;</span><br><span class="line">    \tableofcontents</span><br><span class="line">\end&#123;frame&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Beamer-pdfPages"><a href="#Beamer-pdfPages" class="headerlink" title="Beamer: pdfPages"></a>Beamer: pdfPages</h2><p>在<code>Beamer</code>中类似<code>\includepdf</code>的命令只能在<code>frame</code>之外工作，而且需要设置背景为空，否则插入的pdf将会被背景覆盖。</p>
+<h2 id="pdfPages"><a href="#pdfPages" class="headerlink" title="pdfPages"></a>pdfPages</h2><p>在<code>Beamer</code>中类似<code>\includepdf</code>的命令只能在<code>frame</code>之外工作，而且需要设置背景为空，否则插入的pdf将会被背景覆盖。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\setbeamercolor&#123;background canvas&#125;&#123;bg=&#125;</span><br><span class="line">\includepdf[pages=&#123;1-5&#125;]&#123;peTimeCoeff.pdf&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="字体大小查看"><a href="#字体大小查看" class="headerlink" title="字体大小查看"></a>字体大小查看</h2><p> 如果想要查看或者使用字体大小作为变量，可以使用<code>\f@size</code>，比如如果想要输出字体大小使用下面的代码加入正文</p>
